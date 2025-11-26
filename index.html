@@ -1,127 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Govind | Developer Portfolio</title>
-  <!-- Font Awesome CDN for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-  <link rel="stylesheet" href="govind.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Govind Portfolio</title>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- CSS File -->
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-  <!-- Dark/Light Toggle -->
-  <button id="themeToggle">🌙</button>
-
-  <!-- Sidebar Navigation -->
-  <nav class="sidebar">
+  <!-- Sidebar -->
+  <div class="sidebar">
     <ul>
-      <li><a href="#about" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
-      <li><a href="#skills" class="nav-link"><i class="fas fa-code"></i> Skills</a></li>
-      <li><a href="#projects" class="nav-link"><i class="fas fa-folder-open"></i> Projects</a></li>
-      <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
-    </ul>
-  </nav>
+      <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
+      <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
 
-  <!-- Main Content -->
-  <main class="main-grid">
-    
-    <!-- Hero / Photo & Links -->
-    <section class="hero-profile">
+      <!-- Social Links -->
+      <li><a href="https://github.com/mgovindhu9-rgb" target="_blank">
+          <i class="fab fa-github"></i> GitHub
+        </a></li>
+
+      <li><a href="https://www.naukri.com/mnjuser/homepage" target="_blank">
+          <i class="fas fa-briefcase"></i> Naukri
+        </a></li>
+
+      <li><a href="https://www.linkedin.com/in/govindh-m-5660502b8/" target="_blank">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a></li>
+
+      <li><a href="https://medium.com" target="_blank">
+          <i class="fab fa-medium"></i> Medium
+        </a></li>
+
+      <li><a href="mailto:mgovindhu9@gmail.com">
+          <i class="fas fa-envelope"></i> Email
+        </a></li>
+
+      <li><a href="tel:9618523155">
+          <i class="fas fa-phone"></i> Call
+        </a></li>
+    </ul>
+  </div>
+
+  <div class="main-grid">
+
+    <section id="home" class="hero-profile">
       <div class="hero-text">
-        <h1>Hi, I'm Govind</h1>
-        <p>Web Developer & QA Enthusiast</p>
-        <a href="Govind_Resume.pdf" download class="resume-btn"><i class="fas fa-download"></i> Download Resume</a>
+        <h1>Hi, I'm Govind </h1>
+        <p>Frontend Developer | QA Enthusiast | Web Designer</p>
+        <a href="Resume.pdf" download class="resume-btn">Download Resume</a>
       </div>
 
       <div class="profile-container">
-        <img src="C:\WEB TEH\Portfolio\Govind.jpg" alt="Govind Photo" class="profile-photo">
-        <div class="links">
-          <a href="https://github.com/mgovindhu9-rgb" target="_blank" class="social-btn github"><i class="fab fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/mudavath-govindu-55614b208/" target="_blank" class="social-btn linkedin"><i class="fab fa-linkedin"></i></a>
-          <a href="https://www.naukri.com/mnjuser/homepage" target="_blank" class="social-btn naukri"><i class="fas fa-briefcase"></i></a>
-          <a href="https://medium.com/@mgovindhu9" target="_blank" class="social-btn medium"><i class="fab fa-medium"></i></a>
-          <a href="mailto:mgovindhu9@gmail.com" class="contact-btn email"><i class="fas fa-envelope"></i></a>
-          <a href="tel:+919618523155" class="contact-btn phone"><i class="fas fa-phone"></i></a>
-        </div>
+        <img src="Govind.jpg" alt="Govind Profile Photo" class="profile-photo" />
       </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="section reveal">
-      <h2>About Me</h2>
-      <p>I am a passionate Web Developer and QA enthusiast. I build responsive and interactive web apps using HTML, CSS, JavaScript, Angular, and perform Manual & Automation Testing to ensure high-quality software.</p>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="section reveal">
-      <h2>Skills & Expertise</h2>
+    <section id="skills" class="section">
+      <h2>Skills</h2>
       <div class="skills-grid">
         <div class="skill">
-          <div class="skill-icon">🌐</div>
-          <h3>HTML & CSS</h3>
-          <p>Used for designing responsive, semantic, and visually appealing web pages. Key for front-end structure and styling.</p>
+          <div class="skill-icon"><i class="fab fa-html5"></i></div>
+          <h3>HTML</h3>
+          <p>Semantic tags, SEO-friendly structure, forms, tables.</p>
         </div>
         <div class="skill">
-          <div class="skill-icon">📜</div>
+          <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+          <h3>CSS / SCSS</h3>
+          <p>Flexbox, Grid, Animations, Variables, Responsive design.</p>
+        </div>
+        <div class="skill">
+          <div class="skill-icon"><i class="fab fa-js"></i></div>
           <h3>JavaScript</h3>
-          <p>Used for dynamic content, interactivity, DOM manipulation, API calls, and logic implementation on web apps.</p>
+          <p>DOM Manipulation, Events, API fetch, ES6 concepts.</p>
         </div>
         <div class="skill">
-          <div class="skill-icon">🅰️</div>
+          <div class="skill-icon"><i class="fab fa-angular"></i></div>
           <h3>Angular</h3>
-          <p>Used to build scalable, modular, and single-page applications with components, routing, and data binding.</p>
+          <p>Components, Routing, Directives, Pipes, Services, Forms.</p>
         </div>
         <div class="skill">
-          <div class="skill-icon">🔍</div>
-          <h3>Manual & Automation Testing</h3>
-          <p>Ensures software quality, detects bugs, and validates functionality. Automation helps speed up repetitive test cases.</p>
+          <div class="skill-icon"><i class="fas fa-bug"></i></div>
+          <h3>Manual Testing</h3>
+          <p>Test cases, Bug reporting, SDLC, STLC, Black-box testing.</p>
+        </div>
+        <div class="skill">
+          <div class="skill-icon"><i class="fas fa-laptop-code"></i></div>
+          <h3>Automation Testing</h3>
+          <p>Selenium WebDriver, Locators, TestNG, Basic Java automation.</p>
+        </div>
+        <div class="skill">
+          <div class="skill-icon"><i class="fas fa-database"></i></div>
+          <h3>SQL</h3>
+          <p>Joins, CRUD operations, Filters, Group By, Aggregate functions.</p>
+        </div>
+        <div class="skill">
+          <div class="skill-icon"><i class="fas fa-code-branch"></i></div>
+          <h3>Git & GitHub</h3>
+          <p>Commits, Push/Pull, Branching, Repository hosting.</p>
         </div>
       </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section reveal">
+    <section id="projects" class="section">
       <h2>Projects</h2>
       <div class="projects-grid">
         <div class="project-card">
-          <div class="overlay">
-            <h3>Blinkit-style Grocery App</h3>
-            <p><strong>Description:</strong> Grocery app with login, registration, and multiple product categories.</p>
-            <p><strong>Technologies Used:</strong> HTML, CSS, JavaScript, Angular</p>
-            <p><strong>Key Features:</strong> Responsive design, category filtering, user authentication</p>
-            <button>View Project</button>
-          </div>
+          <h3>Angular Traffic Signal</h3>
+          <p>Developed using Directives, Event Emitters, Auto & Manual mode.</p><a
+            href="https://github.com/mgovindhu9-rgb/AngularTask1.git" target="_blank"><button>View Project</button></a>
         </div>
         <div class="project-card">
-          <div class="overlay">
-            <h3>Traffic Signal Angular App</h3>
-            <p><strong>Description:</strong> Interactive traffic signal simulation with countdown timers.</p>
-            <p><strong>Technologies Used:</strong> HTML, CSS, JavaScript, Angular</p>
-            <p><strong>Key Features:</strong> Countdown timer, automatic signal changes, interactive buttons</p>
-            <button>View Project</button>
-          </div>
+          <h3>Portfolio Website</h3>
+          <p>A complete personal portfolio website with modern UI.</p><button>View Project</button>
+        </div>
+        <div class="project-card">
+          <h3>IoT Women Safety System</h3>
+          <p>An IoT-based Women Security Assistance System with GPS Tracking.</p><button>View Project</button>
+        </div>
+        <div class="project-card">
+          <h3>Product Shopping Cart</h3>
+          <p>A complete e-commerce cart system built with HTML, CSS, JavaScript & Angular for multiple categories.</p>
+          <button>View Project</button>
         </div>
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section reveal">
-      <h2>Contact Me</h2>
-      <p>If you have any job vacancies, internships, or apprenticeship opportunities, feel free to reach out:</p>
-      <div class="contact-buttons">
-        <a href="mailto:mgovindhu9@gmail.com" class="contact-btn email"><i class="fas fa-envelope"></i> Email Me</a>
-        <a href="tel:+919618523155" class="contact-btn phone"><i class="fas fa-phone"></i> Call Me</a>
-      </div>
-    </section>
+  </div>
 
-  </main>
-
-  <!-- Footer -->
   <footer>
-    <p>© 2025 Govind. All Rights Reserved.</p>
+    <p>© 2025 Govind – All Rights Reserved.</p>
   </footer>
-
-  <script src="govind.js"></script>
+  <script src="script.js"></script>
 </body>
+
 </html>

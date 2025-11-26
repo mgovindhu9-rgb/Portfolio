@@ -4,42 +4,41 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Arial', sans-serif;
-  transition: all 0.4s ease; /* smooth hover & theme changes */
+  transition: all 0.4s ease;
 }
 
 /* Theme Variables */
 :root {
-  /* Light Theme Colors */
-  --body-bg: #f0f4f8; 
-  --sidebar-bg: #2c3e50;
-  --text-color: #222;
-  --hero-bg: #ffe5d9;
-  --section-bg: #fff5e6;
-  --skills-bg: #e6f7ff;
-  --projects-bg: #f0f0f0;
-  --btn-bg: #ff7e5f;
-  --link-bg: #34495e;
-  --footer-bg: #1b1b2f;
+  --body-bg: #fdf6e3;
+  --sidebar-bg: #3b4252;
+  --text-color: #2e3440;
+  --hero-bg: #d8dee9;
+  --section-bg: #eceff4;
+  --skills-bg: #e5e9f0;
+  --projects-bg: #dbe9f4;
+  --btn-bg: #2c284f;
+  --link-bg: #7ea2eb;
+  --footer-bg: #2e3440;
 }
 
 body.dark-theme {
-  /* Dark Theme Colors */
-  --body-bg: #1b1b2f;
-  --sidebar-bg: #111;
-  --text-color: #f5f5f5;
-  --hero-bg: #222c34;
-  --section-bg: #2a2a3c;
-  --skills-bg: #1f2a3a;
-  --projects-bg: #222;
-  --btn-bg: #43cea2;
-  --link-bg: #333;
-  --footer-bg: #111;
+  --body-bg: #2e3440;
+  --sidebar-bg: #1f242e;
+  --text-color: #eceff4;
+  --hero-bg: #3b4252;
+  --section-bg: #434c5e;
+  --skills-bg: #4c566a;
+  --projects-bg: #3b4252;
+  --btn-bg: #88c0d0;
+  --link-bg: #3b4252;
+  --footer-bg: #1f242e;
 }
 
 /* Body */
 body {
   background: var(--body-bg);
   color: var(--text-color);
+  overflow-x: hidden;
 }
 
 /* Sidebar */
@@ -47,13 +46,14 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 200px;
+  width: 220px;
   height: 100vh;
   background: var(--sidebar-bg);
   color: #fff;
   padding-top: 50px;
   box-shadow: 2px 0 10px rgba(0,0,0,0.2);
   z-index: 100;
+  overflow-y: auto;
 }
 
 .sidebar ul {
@@ -80,12 +80,11 @@ body {
 
 .sidebar ul li a:hover {
   background: var(--btn-bg);
-  color: #fff;
   transform: translateX(5px);
   font-weight: bold;
 }
 
-/* Main Content */
+/* Main Grid */
 .main-grid {
   margin-left: 220px;
   padding: 30px;
@@ -94,7 +93,7 @@ body {
   gap: 50px;
 }
 
-/* Hero Section (Photo Right) */
+/* Hero Section */
 .hero-profile {
   display: flex;
   justify-content: space-between;
@@ -116,14 +115,15 @@ body {
 
 .hero-text p {
   font-size: 18px;
-  color: #555;
+  color: #4c566a;
 }
 
+/* Download Resume Button - Green */
 .resume-btn {
   display: inline-block;
   margin-top: 15px;
   padding: 10px 20px;
-  background: var(--btn-bg);
+  background: #28a745; /* green */
   color: #fff;
   text-decoration: none;
   border-radius: 8px;
@@ -132,10 +132,11 @@ body {
 }
 
 .resume-btn:hover {
+  background: #218838;
   transform: scale(1.05);
 }
 
-/* Profile Container */
+/* Profile Photo */
 .profile-container {
   display: flex;
   flex-direction: column;
@@ -155,31 +156,6 @@ body {
 .profile-photo:hover {
   border-color: var(--btn-bg);
   transform: scale(1.05);
-}
-
-/* Social Links */
-.links {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.links a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: var(--link-bg);
-  color: #fff;
-  font-size: 22px;
-  transition: all 0.4s ease;
-}
-
-.links a:hover {
-  background: var(--btn-bg);
-  transform: scale(1.2) rotate(10deg);
 }
 
 /* Sections */
@@ -256,16 +232,24 @@ body {
   transform: scale(1.05);
 }
 
-/* Contact Buttons */
+/* Contact Buttons - Fixed Right */
 .contact-buttons {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
   display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 15px;
+  padding: 10px;
+  z-index: 1000;
 }
 
 .contact-btn {
-  padding: 10px 18px;
-  border-radius: 8px;
+  writing-mode: vertical-rl;
+  text-align: center;
+  padding: 12px;
+  border-radius: 8px 0 0 8px;
   background: var(--btn-bg);
   color: #fff;
   text-decoration: none;
@@ -293,7 +277,6 @@ footer {
     margin-left: 0;
     padding: 20px;
   }
-
   .sidebar {
     width: 100%;
     height: auto;
@@ -301,26 +284,30 @@ footer {
     display: flex;
     justify-content: center;
     padding: 10px 0;
+    overflow-x: auto;
   }
-
   .sidebar ul {
     display: flex;
     gap: 15px;
   }
-
   .hero-profile {
     flex-direction: column-reverse;
     align-items: center;
     text-align: center;
   }
-
   .hero-text {
     max-width: 100%;
   }
-
-  .links {
+  .contact-buttons {
+    position: static;
+    transform: none;
     flex-direction: row;
+    gap: 15px;
     justify-content: center;
-    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  .contact-btn {
+    writing-mode: horizontal-tb;
+    border-radius: 8px;
   }
 }
